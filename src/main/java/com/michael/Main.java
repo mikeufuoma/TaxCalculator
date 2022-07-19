@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Please enter the annual Amount:");
         int income = scanner.nextInt();
         TaxProcessor processor = new TaxProcessor(income);
-        processor.printBreakDown();
+        System.out.println(processor.getTaxBreakDown());
     }
 
 }
