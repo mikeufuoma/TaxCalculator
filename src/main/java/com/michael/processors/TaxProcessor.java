@@ -9,15 +9,22 @@ public class TaxProcessor {
         income_ = income;
     }
 
-    public void printBreakDown() {
+    public String getTaxBreakDown() {
         int taxRate = getTaxRate();
         int tax = getTaxAmount(taxRate);
-        System.out.println("*******************************************");
-        System.out.println("Gross Income: "+income_);
-        System.out.println("Tax Rate: "+taxRate+"%");
-        System.out.println("Tax Amount: "+tax);
-        System.out.println("Net Income: "+(income_-tax));
-        System.out.println("*******************************************");
+        StringBuilder taxBreakDown = new StringBuilder();
+        taxBreakDown.append("===================================");
+        taxBreakDown.append("\n");
+        taxBreakDown.append("Gross Income: "+income_);
+        taxBreakDown.append("\n");
+        taxBreakDown.append("Tax Rate: "+taxRate+"%");
+        taxBreakDown.append("\n");
+        taxBreakDown.append("Tax Amount: "+tax);
+        taxBreakDown.append("\n");
+        taxBreakDown.append("Net Income: "+(income_-tax));
+        taxBreakDown.append("\n");
+        taxBreakDown.append("===================================");
+        return taxBreakDown.toString();
     }
 
     private int getTaxAmount(int taxRate){
