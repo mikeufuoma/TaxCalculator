@@ -12,10 +12,12 @@ public class TaxProcessor {
     public void printBreakDown() {
         int taxRate = getTaxRate();
         int tax = getTaxAmount(taxRate);
+        System.out.println("*******************************************");
         System.out.println("Gross Income: "+income_);
         System.out.println("Tax Rate: "+taxRate+"%");
         System.out.println("Tax Amount: "+tax);
         System.out.println("Net Income: "+(income_-tax));
+        System.out.println("*******************************************");
     }
 
     private int getTaxAmount(int taxRate){
