@@ -27,12 +27,12 @@ public class TaxProcessor {
         return taxBreakDown.toString();
     }
 
-    private int getTaxAmount(int taxRate){
+    protected int getTaxAmount(int taxRate){
         int taxAmount = (income_ * taxRate)/100;
         return taxAmount;
     }
 
-    private int getTaxRate(){
+    protected int getTaxRate(){
         for(IncomeRanges eachRange: IncomeRanges.values()){
             if(income_ <= eachRange.getIncome())
                 return eachRange.getTaxRate();
