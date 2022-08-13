@@ -20,7 +20,7 @@ public class TaxProcessorTest {
 
     @Test
     public void getTaxRateTest(){
-        assertEquals(processor.getTaxRate(),0);
+        assertEquals(processor.getTaxRate(),5);
     }
 
     @Test
