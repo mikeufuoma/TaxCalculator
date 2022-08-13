@@ -5,6 +5,10 @@ node("master"){
     def workspace = env.WORKSPACE;
 
     try{
+    
+	    stage("Clean Workspace"){
+	    	sh "rm -rf ${workspace}/*"
+	    }
 
         stage("Clone"){
             checkout([

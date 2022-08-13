@@ -12,7 +12,7 @@ public class IncomeRangesTest{
 
     @Test
     public void getTaxRateSecondTest(){
-        assertEquals(IncomeRanges.SECOND.getTaxRate(),0);
+        assertEquals(IncomeRanges.SECOND.getTaxRate(),5);
     }
 
     @Test
